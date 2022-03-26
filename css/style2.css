@@ -1,0 +1,374 @@
+.Select input[type="radio"]:checked + label:after, .Select label:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #e5c4ff;
+  border: 4px solid #565656;
+  padding: 2px;
+}
+
+html, body {
+  background-color: #565656;
+  font-family: Segoe UI, Microsoft JhengHei, Sans Francisco, PingFang;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #000;
+  width: 100%;
+  height: 100px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#app {
+  position: relative;
+  background-color: #162334;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 20px;
+  position: fixed;
+  right: -220px;
+  top: 30%;
+  z-index: 5;
+  color: #FFFFFF;
+  padding: 10px 30px 10px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #6815a8;
+  border: 3px solid rgba(104, 21, 168, 0.5);
+  opacity: 0.7;
+}
+
+.menu span {
+  font-size: 24px;
+  margin: 0 20px 0 10px;
+}
+
+.menu:hover {
+  right: -10px;
+  opacity: 1;
+}
+
+.top-img {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.top-img img {
+  width: 100%;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  padding: 25px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 900;
+}
+
+.title .twitch-logo {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 2rem;
+}
+
+.title .line {
+  width: 300px;
+  height: 2px;
+  background-color: #e5c4ff;
+  margin: 20px;
+}
+
+.Select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+}
+
+.Select .SelectWeek, .Select .SelectAll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Select input[type="radio"] {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  z-index: -1;
+}
+
+.Select label {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e5c4ff;
+  border-radius: 50px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Select label:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(229, 196, 255, 0.8);
+          box-shadow: 0px 0px 10px rgba(229, 196, 255, 0.8);
+}
+
+.Searcharea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fff;
+  padding: 5px;
+  margin: 10px;
+}
+
+.Searcharea .fa-search {
+  color: #ccc;
+  padding: 3px;
+}
+
+.Searcharea .search {
+  border: none;
+  border-left: 2px solid #ccc;
+  padding: 0px 5px;
+}
+
+.Searcharea .search:focus {
+  outline: none;
+}
+
+.cardgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0px 16px;
+}
+
+.no-data {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+.card_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+  max-width: 100%;
+  background-color: none;
+}
+
+.card_inner {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.card_inner:hover {
+  background-color: #f5e9ff;
+}
+
+.card_inner .rank {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  background-color: #6815a8;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card_inner .broadcaster {
+  font-size: 28px;
+  padding: 10px;
+  position: relative;
+}
+
+.card_inner .broadcaster:after {
+  content: "";
+  background-color: rgba(104, 21, 168, 0.5);
+  height: 1px;
+  width: 200px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.card_inner .Cliptitle {
+  font-size: 16px;
+  padding: 10px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card_inner .cover {
+  width: 100%;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.card_inner .cover:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card_inner .fa-eye {
+  margin-right: 5px;
+  color: red;
+}
+
+.card_inner .wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=style2.css.map */

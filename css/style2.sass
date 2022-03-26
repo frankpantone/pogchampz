@@ -1,0 +1,221 @@
+// Color
+// color
+$DarkMainColor: #6815a8
+$LighMaintColor: #e5c4ff
+$HoverMainColor: #f5e9ff
+$RelativeMainColor: #fff6e0
+$BackgroundColor: #565656
+
+// variables
+
+@mixin FlexSetting($justify-content:center, $flex-direction:row)
+	display: flex
+	justify-content: $justify-content
+	align-items: center
+	flex-direction: $flex-direction
+
+@mixin BoxShadow($X:5px, $Y:5px, $Z:10px, $color:#000)
+	box-shadow: $X $Y $Z rgba($color,0.5)
+
+%RadioStyle
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	width: 20px
+	height: 20px
+	border-radius: 50px
+	background-color: $LighMaintColor
+	border: 4px solid $BackgroundColor
+	padding: 2px
+
+
+
+html,body
+	background-color: $BackgroundColor
+	font-family: Segoe UI, Microsoft JhengHei, Sans Francisco, PingFang
+
+footer 
+	+FlexSetting
+	background-color: #000
+	width: 100%
+	height: 100px
+	color: #fff
+	text-align: center
+#app 
+	position: relative
+	background-color: #162334
+.menu
+	+FlexSetting
+	font-size: 20px
+	position: fixed
+	right: -220px
+	top: 30%
+	z-index: 5
+	color: $LighMaintColor
+	padding: 10px 30px 10px 10px
+	transition: 0.5s 
+	cursor: pointer
+	background-color: $DarkMainColor
+	border: 3px solid rgba($DarkMainColor,0.5)
+	opacity: 0.7
+	span 
+		font-size: 24px
+		margin: 0 20px 0 10px
+	&:hover 
+		right: -10px
+		opacity: 1
+.top-img 
+	width: 100%
+	height: 600px
+	overflow: hidden
+	img 
+		width: 100%
+		
+
+.title
+	+FlexSetting(center, column)
+	color: #fff
+	padding: 25px
+	margin-top: 10px
+	letter-spacing: 3px
+	position: absolute
+	top: 100px
+	left: 50%
+	transform: translateX(-50%)
+	font-weight: 900
+	.twitch-logo 
+		width: 60%
+		margin-bottom: 20px
+	h1
+		font-size: 2rem
+	.line
+		width: 300px
+		height: 2px
+		background-color: $LighMaintColor
+		margin: 20px
+
+
+.Select
+	+FlexSetting
+	padding: 10px
+	.SelectWeek, .SelectAll
+		+FlexSetting
+
+	input[type="radio"]
+		opacity: 0
+		width: 20px
+		height: 20px
+		z-index: -1
+		&:checked+label
+			&:after
+				@extend %RadioStyle
+				
+
+	label
+		width: 20px
+		height: 20px
+		border: 3px solid $LighMaintColor
+		border-radius: 50px
+		box-sizing: content-box
+		position: relative
+		margin-right: 10px 
+		cursor: pointer
+		&:hover
+			box-shadow: 0px 0px 10px rgba($LighMaintColor, 0.8)
+			&:after
+				@extend %RadioStyle
+
+.Searcharea
+	+FlexSetting
+	background-color: #fff
+	padding: 5px
+	margin: 10px
+	.fa-search
+		color: #ccc
+		padding: 3px
+
+	.search
+		border: none
+		border-left: 2px solid #ccc
+		padding: 0px 5px
+		&:focus
+			outline: none
+
+
+.cardgroup
+	+FlexSetting
+	flex-wrap: wrap
+	padding: 0px 16px
+
+.no-data 
+	width: 100%
+	height: 100px
+	text-align: center
+	font-size: 40px
+	color: #fff
+.card_wrapper
+	+FlexSetting
+	padding: 10px
+	max-width: 100%
+	background-color: none
+
+.card_inner
+	+BoxShadow
+	+FlexSetting
+	background-color: #fff
+	padding: 10px
+	margin: 10px
+	max-width: 100%
+	position: relative
+	text-align: center
+	flex-direction: column
+	&:hover
+		background-color: $HoverMainColor
+
+	.rank
+		+BoxShadow
+		position: absolute
+		top: -5%
+		left: -5%
+		background-color: $DarkMainColor
+		color: #fff
+		padding: 10px 
+		font-size: 20px 
+
+	.broadcaster
+		font-size: 28px
+		padding: 10px
+		position: relative
+		&:after 
+			content: ""
+			background-color: rgba($DarkMainColor,0.5)
+			height: 1px
+			width: 200px
+			position: absolute
+			bottom: 0%
+			left: 50%
+			transform: translateX(-50%)
+
+	.Cliptitle
+		font-size: 16px
+		padding: 10px
+		max-width: 200px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		
+	.cover
+		width: 100%
+		margin: 10px 0px
+		cursor: pointer
+		&:hover
+			+BoxShadow(0px, 0px, 10px)
+
+	.fa-eye
+		margin-right: 5px
+		color: red
+	.wrap 
+		width: 100%
+		+FlexSetting(space-between,row)
+
